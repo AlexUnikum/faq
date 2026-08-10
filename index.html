@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>FAQ — Шмурдяк</title>
     <style>
         * {
@@ -24,7 +24,7 @@
             max-width: 820px;
             width: 100%;
             background-color: #141414;
-            padding: 40px 35px;
+            padding: 44px 40px;
             border-radius: 32px;
             border: 1px solid #2a2a2a;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
@@ -36,26 +36,36 @@
             font-weight: 700;
             text-align: center;
             letter-spacing: 1px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .subtitle {
             color: #aaaaaa;
             font-size: 17px;
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 36px;
             border-bottom: 1px solid #2a2a2a;
             padding-bottom: 18px;
             font-weight: 300;
+        }
+
+        .section-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 28px 0 12px;
+            padding-left: 4px;
+            border-left: 4px solid #ff6a00;
+            padding-left: 14px;
         }
 
         .faq-item {
             background-color: #1a1a1a;
             border: 1px solid #2e2e2e;
             border-radius: 16px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             overflow: hidden;
-            transition: border-color 0.2s;
+            transition: 0.2s;
         }
 
         .faq-item:hover {
@@ -63,9 +73,9 @@
         }
 
         .faq-question {
-            padding: 18px 22px;
+            padding: 16px 20px;
             color: #ffffff;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 500;
             cursor: pointer;
             display: flex;
@@ -73,22 +83,27 @@
             align-items: center;
             user-select: none;
             background-color: #1a1a1a;
-            transition: background-color 0.2s;
+            transition: 0.2s;
+            gap: 12px;
         }
 
         .faq-question:hover {
             background-color: #222;
         }
 
-        .faq-question .icon {
+        .faq-question .q-icon {
             font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .faq-question .arrow {
+            font-size: 18px;
             color: #ff6a00;
             transition: transform 0.3s ease;
             flex-shrink: 0;
-            margin-left: 16px;
         }
 
-        .faq-item.active .faq-question .icon {
+        .faq-item.active .faq-question .arrow {
             transform: rotate(180deg);
         }
 
@@ -96,7 +111,7 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.3s ease;
-            padding: 0 22px;
+            padding: 0 20px;
             color: #c0c0c0;
             font-size: 15px;
             line-height: 1.6;
@@ -104,7 +119,7 @@
 
         .faq-item.active .faq-answer {
             max-height: 600px;
-            padding: 0 22px 20px 22px;
+            padding: 0 20px 20px 20px;
         }
 
         .faq-answer a {
@@ -114,6 +129,37 @@
 
         .faq-answer a:hover {
             text-decoration: underline;
+        }
+
+        .cta-block {
+            margin-top: 40px;
+            background-color: #1a1a1a;
+            border-radius: 20px;
+            padding: 24px 28px;
+            border: 1px solid #2e2e2e;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .cta-block:hover {
+            border-color: #555;
+            background-color: #202020;
+        }
+
+        .cta-block p {
+            color: #dddddd;
+            font-size: 17px;
+        }
+
+        .cta-block a {
+            color: #ff6a00;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dashed #ff6a00;
+        }
+
+        .cta-block a:hover {
+            border-bottom: 1px solid #ff6a00;
         }
 
         .footer-note {
@@ -148,6 +194,9 @@
             .faq-answer {
                 font-size: 14px;
             }
+            .section-title {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -156,115 +205,153 @@
 <div class="container">
 
     <h1>📋 Часто задаваемые вопросы</h1>
-    <div class="subtitle">Ответы на всё, что ты хотел спросить</div>
+    <div class="subtitle">Коротко и по делу — чтобы ты сразу понимал, как мы работаем</div>
+
+    <div class="section-title">💰 Цены и оплата</div>
 
     <div class="faq-item">
         <div class="faq-question">
-            <span>Твои виджеты, где ты их взял?</span>
-            <span class="icon">▼</span>
+            <span class="q-icon">💸</span>
+            <span>Почему у тебя такие низкие цены?</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Виджет погоды — самописный, навайбкодил себе сам. <br>
-            Виджет с музыкой — Playback Overlay, адаптировал под себя.
+            Я начинающий кодер, поэтому пока беру недорого, чтобы наработать опыт и портфолио. Качество при этом не страдает — ты получаешь нормальную работу за честные деньги.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            <span>Твой сайт самописный, или ты покупал?</span>
-            <span class="icon">▼</span>
+            <span class="q-icon">💳</span>
+            <span>Как оплачивается работа?</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Сайт полностью самописный. Тоже вайбкод.
+            Предоплата 50% — после утверждения макета или концепции. Остальные 50% — после сдачи готовой работы и проверки. Всё прозрачно, без скрытых платежей.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            <span>Продаёшь ли какие-либо услуги?</span>
-            <span class="icon">▼</span>
+            <span class="q-icon">📦</span>
+            <span>Что входит в стоимость?</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Да. Создаю сайты, виджеты для OBS, настраиваю OBS под стримера. <br>
-            <a href="https://alexunikum.github.io/shmurdyak-services/" target="_blank">alexunikum.github.io/shmurdyak-services/</a>
+            В цену входит: сама работа (код или макет), одна бесплатная правка после сдачи, консультация по использованию. Хостинг, домен или печать оплачиваются отдельно, если нужны.
+        </div>
+    </div>
+
+    <div class="section-title">⏱️ Сроки и процесс</div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="q-icon">⏳</span>
+            <span>Долго ли ты делаешь заказ?</span>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Всё зависит от сложности. Визитка — от пары часов до дня. Лендинг — 2–3 дня. Индивидуальный проект — обсуждаем отдельно. Я всегда говорю срок до начала работы.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
+            <span class="q-icon">🤝</span>
             <span>Что нужно делать клиенту?</span>
-            <span class="icon">▼</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Клиенту нужно только описать, чего он хочет. Всё остальное делаю я.
+            Только описать, что ты хочешь. Всё остальное — моя работа. Я задаю уточняющие вопросы, предлагаю варианты, показываю промежуточные результаты.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            <span>Чего такие цены низкие?</span>
-            <span class="icon">▼</span>
+            <span class="q-icon">🔄</span>
+            <span>Можно ли будет что-то поменять после сдачи?</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Начинающий кодер. Пока беру недорого, чтобы наработать опыт и портфолио.
+            Да. В рамках стоимости — одна бесплатная правка в течение 3 дней после сдачи. Если правки сложные или их много — обсуждаем отдельно.
+        </div>
+    </div>
+
+    <div class="section-title">🛠️ Технические вопросы</div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="q-icon">📁</span>
+            <span>Где будет храниться сайт?</span>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Я выкладываю сайт на GitHub Pages. Это бесплатно, надёжно и быстро. Ты получаешь ссылку, которую можно отправлять кому угодно.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            <span>Долго делаешь работу?</span>
-            <span class="icon">▼</span>
+            <span class="q-icon">🧩</span>
+            <span>Что если я вообще ничего не понимаю в сайтах?</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Всё зависит от объёма. <br>
-            Виджет — несколько часов. <br>
-            Сайт-визитка — от пары часов до пары дней.
+            Это нормально. Моя задача — сделать так, чтобы тебе не пришлось в этом разбираться. Ты говоришь, что нужно, я делаю.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            <span>Как и где заказать?</span>
-            <span class="icon">▼</span>
+            <span class="q-icon">🔧</span>
+            <span>Есть ли гарантия на работу?</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Все контакты на основном сайте. <br>
-            📩 Discord, Telegram — всегда открыты. <br>
-            📢 В Steam лучше не писать.
+            Да. Если что-то сломается не по твоей вине — я бесплатно починю. Если проблема на моей стороне — исправляю без доплат.
+        </div>
+    </div>
+
+    <div class="section-title">📞 Связь и заказ</div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span class="q-icon">✍️</span>
+            <span>Как сделать заказ?</span>
+            <span class="arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+            Просто напиши мне в Telegram, Discord или через форму на визитке. Расскажи, что нужно, и я отвечу в течение часа.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            <span>Нужно ли что-то устанавливать?</span>
-            <span class="icon">▼</span>
+            <span class="q-icon">🔍</span>
+            <span>Ты делаешь только то, что указано в услугах?</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Нет. Клиенту ничего не нужно устанавливать. <br>
-            Сайт хранится на GitHub. От тебя только описание и оплата.
+            Нет. Это базовый список. Если у тебя идея, которой там нет — просто напиши. Я всегда открыт к нестандартным проектам, если в них есть смысл.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            <span>Есть ли гарантия?</span>
-            <span class="icon">▼</span>
+            <span class="q-icon">🚫</span>
+            <span>Что ты не делаешь?</span>
+            <span class="arrow">▼</span>
         </div>
         <div class="faq-answer">
-            Если что-то сломается — я всегда на связи. <br>
-            Починю бесплатно, если проблема на моей стороне.
+            Пока не берусь за крупные интернет-магазины, сложные CRM-системы и проекты с бэкендом на Python/Java. Моя зона — вёрстка, дизайн, статика и лёгкая логика на JS.
         </div>
     </div>
 
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Если я ничего не понимаю?</span>
-            <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
-            Это нормально. Тебе и не нужно разбираться. <br>
-            Ты описываешь желаемое, а я делаю.
-        </div>
+    <div class="cta-block">
+        <p>❓ Не нашёл ответа? Напиши — отвечу в течение часа.</p>
+        <p style="margin-top: 6px;">
+            📩 <a href="https://alexunikum.github.io/shmurdyak-main-site/" target="_blank">Все контакты на визитке</a>
+        </p>
     </div>
 
     <div class="footer-note">
@@ -274,13 +361,13 @@
 </div>
 
 <script>
-    document.querySelectorAll('.faq-item').forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', function () {
-            document.querySelectorAll('.faq-item').forEach(other => {
-                if (other !== item) other.classList.remove('active');
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', function() {
+            const parent = this.closest('.faq-item');
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== parent) item.classList.remove('active');
             });
-            item.classList.toggle('active');
+            parent.classList.toggle('active');
         });
     });
 </script>
